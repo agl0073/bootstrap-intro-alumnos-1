@@ -46,4 +46,4 @@ Este es el **portafolio final** de la asignatura **UD6 – Estructura, contenido
 
 ---
 
-*Generado con Antigravity – AI de Google DeepMind.*
+*README Generado con IA.*
