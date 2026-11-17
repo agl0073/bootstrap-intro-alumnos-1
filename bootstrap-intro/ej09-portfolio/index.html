@@ -3,63 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio profesional de Alejandro Segundo Ganoza Leiro, desarrollador web junior especializado en HTML, CSS, JavaScript y Bootstrap.">
   <title>Alejandro Segundo Ganoza Leiro – Portfolio</title>
-  <meta name="description" content="Portfolio profesional de Tu Nombre, desarrollador web junior.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
   <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Estilos propios (siempre DESPUÉS de Bootstrap) -->
+  <link href="css/estilos.css" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Enlace "Saltar al contenido" (accesibilidad – teclado) -->
+  <a class="visually-hidden-focusable skip-link" href="#contenido-principal">Saltar al contenido</a>
+
   <!-- Navbar (responsive, sticky) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
     <div class="container">
       <a class="navbar-brand" href="#">Alejandro Segundo Ganoza Leiro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house"></i> Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#habilidades"><i class="bi bi-tools"></i> Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos"><i class="bi bi-card-list"></i> Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#formacion"><i class="bi bi-journal-bookmark"></i> Formación</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope"></i> Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house" aria-hidden="true"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades"><i class="bi bi-tools" aria-hidden="true"></i> Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos"><i class="bi bi-card-list" aria-hidden="true"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacion"><i class="bi bi-journal-bookmark" aria-hidden="true"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto</a></li>
         </ul>
+        <!-- Botón modo claro/oscuro -->
+        <button id="btn-tema" class="btn btn-tema ms-lg-3 mt-2 mt-lg-0" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+          <i class="bi bi-moon-fill" aria-hidden="true"></i>
+          <span class="btn-tema-texto">Modo oscuro</span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Portada / Sobre mí -->
-  <section id="sobre-mi" class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <img src="./img/CV_Original.jpg" class="rounded-circle" alt="foto" style="width:200px;height:200px;object-fit:cover;">
-      </div>
-      <div class="col-md-8">
-        <h1 class="display-4">Alejandro Segundo Ganoza Leiro</h1>
-        <p class="lead">Desarrollador web junior · DAW</p>
-        <p>Estudiante de DAW con formación previa en SMR y conocimientos de desarrollo web, sistemas y ciberseguridad. Responsable, sociable y con facilidad para aprender nuevas tecnologías. Busco realizar prácticas para ampliar mis conocimientos y adquirir experiencia profesional.</p>
-        <a href="#proyectos" class="btn btn-primary m-2">Ver proyectos</a>
-        <a href="docs/CV.pdf" class="btn btn-outline-secondary m-2" download>Descargar CV</a>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Contenido principal -->
+  <main id="contenido-principal">
 
-  <!-- Habilidades -->
+    <!-- Portada / Sobre mí -->
+    <section id="inicio" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center">
+            <img src="./img/CV_Original.jpg" class="profile-img rounded-circle img-fluid" alt="Fotografía de perfil de Alejandro Segundo Ganoza Leiro">
+          </div>
+          <div class="col-md-8">
+            <h1 class="display-4">Alejandro Segundo Ganoza Leiro</h1>
+            <p class="lead">Desarrollador web junior · DAW</p>
+            <p>Estudiante de DAW con formación previa en SMR y conocimientos de desarrollo web, sistemas y ciberseguridad. Responsable, sociable y con facilidad para aprender nuevas tecnologías. Busco realizar prácticas para ampliar mis conocimientos y adquirir experiencia profesional.</p>
+            <a href="#proyectos" class="btn btn-primary m-2">Ver proyectos</a>
+            <a href="docs/CV.pdf" class="btn btn-outline-dark m-2" download>Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
     <section id="habilidades" class="py-5">
       <div class="container">
         <h2 class="text-center mb-4">Habilidades</h2>
-
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
           <!-- Front-end -->
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-window-desktop display-4 text-primary mb-3"></i>
+                <i class="bi bi-window-desktop display-4 text-primary mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Front-end</h3>
                 <p class="card-text text-body-secondary small">Maquetación semántica y capa visual.</p>
                 <div>
@@ -76,7 +94,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-server display-4 text-success mb-3"></i>
+                <i class="bi bi-server display-4 text-success mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Back-end</h3>
                 <p class="card-text text-body-secondary small">Lógica del servidor.</p>
                 <div>
@@ -92,7 +110,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-database display-4 text-warning mb-3"></i>
+                <i class="bi bi-database display-4 text-warning mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Bases de datos</h3>
                 <p class="card-text text-body-secondary small">Consultas SQL y modelos relacionales.</p>
                 <div>
@@ -108,7 +126,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-gear display-4 text-danger mb-3"></i>
+                <i class="bi bi-gear display-4 text-danger mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Herramientas</h3>
                 <p class="card-text text-body-secondary small">Control de versiones y entornos de trabajo.</p>
                 <div>
@@ -125,7 +143,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-translate display-4 text-info mb-3"></i>
+                <i class="bi bi-translate display-4 text-info mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Idiomas</h3>
                 <p class="card-text text-body-secondary small">Comunicación.</p>
                 <div>
@@ -139,9 +157,9 @@
           <div class="col">
             <div class="card h-100 shadow-sm border-0 bg-body-tertiary">
               <div class="card-body text-center p-4">
-                <i class="bi bi-people display-4 text-secondary mb-3"></i>
+                <i class="bi bi-people display-4 text-secondary mb-3" aria-hidden="true"></i>
                 <h3 class="h5 card-title">Competencias transversales</h3>
-                <p class="card-text text-body-secondary small">Habilidades.</p>
+                <p class="card-text text-body-secondary small">Habilidades blandas.</p>
                 <div>
                   <span class="badge text-bg-secondary m-1">Resolución de problemas</span>
                   <span class="badge text-bg-secondary m-1">Organización y responsabilidad</span>
@@ -156,135 +174,259 @@
       </div>
     </section>
 
-  <!-- Proyectos (cards) -->
-  <section id="proyectos" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center">Proyectos</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="./img/Al-Assited-Development.png" class="card-img-top" alt="Captura proyecto AI-Assited Development">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/agl0073/AI-Assited-Development-and-Git-Mastery-Objetivr" target="_blank" class="text-decoration-none">AI‑Assited Development and Git Mastery Objetivr</a></h5>
-              <p class="card-text">Proyecto HTML que muestra ejemplos de desarrollo web con Bootstrap y buenas prácticas de Git.</p>
-              <span class="badge bg-primary me-1">HTML</span>
-              <span class="badge bg-success me-1">CSS</span>
-              <span class="badge bg-info me-1">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="./img/Forja_Heroes_II.png" class="card-img-top" alt="Captura proyecto Forja Heroes II">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/agl0073/Forja_Heroes_II" target="_blank" class="text-decoration-none">Forja Heroes II</a></h5>
-              <p class="card-text">Juego de rol construido con PHP y MySQL.</p>
-              <span class="badge bg-danger me-1">PHP</span>
-              <span class="badge bg-warning text-dark me-1">MySQL</span>
-              <span class="badge bg-info me-1">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="./img/Final_Project_Full_Package.png" class="card-img-top" alt="Captura proyecto Final Project Full Package">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/agl0073/Final_Project_Full_Package" target="_blank" class="text-decoration-none">Final Project Full Package</a></h5>
-              <p class="card-text">Proyecto completo en Java que incluye la solución final de la asignatura, con despliegue en Docker.</p>
-              <span class="badge bg-primary me-1">Java</span>
-              <span class="badge bg-success me-1">Docker</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Proyectos (cards con modal) -->
+    <section id="proyectos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Proyectos</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-  <!-- Formación y experiencia (accordion) -->
-  <section id="formacion" class="py-5">
-    <div class="container">
-      <h2 class="mb-4 text-center">Formación y experiencia</h2>
-      <div class="accordion" id="formacionAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingDAW">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDAW" aria-expanded="true" aria-controls="collapseDAW">
-              Desarrollo de Aplicaciones Web (DAW)
-            </button>
-          </h2>
-          <div id="collapseDAW" class="accordion-collapse collapse show" aria-labelledby="headingDAW" data-bs-parent="#formacionAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li>HTML, CSS, JavaScript, Bootstrap</li>
-                <li>PHP, MySQL, Node.js</li>
-                <li>Git & GitHub, Figma, Docker Desktop</li>
-                <li>MySQL, Microsft SQL Server</li>
-              </ul>
+          <!-- Proyecto 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/Al-Assited-Development.png" class="card-img-top img-fluid" alt="Captura del proyecto AI-Assisted Development">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">AI-Assisted Development and Git Mastery</h3>
+                <p class="card-text flex-grow-1">Proyecto HTML que muestra ejemplos de desarrollo web con Bootstrap y buenas prácticas de Git.</p>
+                <div class="mb-3">
+                  <span class="badge text-bg-primary me-1">HTML</span>
+                  <span class="badge text-bg-success me-1">CSS</span>
+                  <span class="badge text-bg-info text-dark me-1">Bootstrap</span>
+                </div>
+                <button type="button" class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                  data-proyecto-titulo="AI-Assisted Development and Git Mastery"
+                  data-proyecto-desc="Proyecto HTML que muestra ejemplos de desarrollo web con Bootstrap y buenas prácticas de Git. Incluye estructura semántica, componentes de Bootstrap y control de versiones con Git."
+                  data-proyecto-url="https://github.com/agl0073/AI-Assited-Development-and-Git-Mastery-Objetivr"
+                  data-proyecto-img="./img/Al-Assited-Development.png"
+                  data-proyecto-alt="Captura del proyecto AI-Assisted Development"
+                  data-proyecto-badges="HTML,CSS,Bootstrap">
+                  Ver detalle del proyecto
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingPracticas">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePracticas" aria-expanded="false" aria-controls="collapsePracticas">
-              Prácticas en FFEOE
-            </button>
-          </h2>
-          <div id="collapsePracticas" class="accordion-collapse collapse" aria-labelledby="headingPracticas" data-bs-parent="#formacionAccordion">
-            <div class="accordion-body">
-              Grado Medio en Sistemas Microinformáticos y Redes: Gestión en Ciberseguridad y Gestión de Riesgos
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contacto (form) -->
-  <section id="contacto" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center">Contacto</h2>
-      <form class="row g-3" novalidate>
-        <div class="col-md-6">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required placeholder="Nombre...">
+          <!-- Proyecto 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/Forja_Heroes_II.png" class="card-img-top img-fluid" alt="Captura del proyecto Forja Heroes II">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Forja Heroes II</h3>
+                <p class="card-text flex-grow-1">Juego de rol construido con PHP y MySQL.</p>
+                <div class="mb-3">
+                  <span class="badge text-bg-danger me-1">PHP</span>
+                  <span class="badge text-bg-warning text-dark me-1">MySQL</span>
+                  <span class="badge text-bg-info text-dark me-1">Bootstrap</span>
+                </div>
+                <button type="button" class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                  data-proyecto-titulo="Forja Heroes II"
+                  data-proyecto-desc="Juego de rol desarrollado con PHP y MySQL. Permite crear personajes, gestionar inventario y combatir contra enemigos en un mundo de fantasía."
+                  data-proyecto-url="https://github.com/agl0073/Forja_Heroes_II"
+                  data-proyecto-img="./img/Forja_Heroes_II.png"
+                  data-proyecto-alt="Captura del proyecto Forja Heroes II"
+                  data-proyecto-badges="PHP,MySQL,Bootstrap">
+                  Ver detalle del proyecto
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/Final_Project_Full_Package.png" class="card-img-top img-fluid" alt="Captura del proyecto Final Project Full Package">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Final Project Full Package</h3>
+                <p class="card-text flex-grow-1">Proyecto completo en Java que incluye la solución final de la asignatura, con despliegue en Docker.</p>
+                <div class="mb-3">
+                  <span class="badge text-bg-primary me-1">Java</span>
+                  <span class="badge text-bg-success me-1">Docker</span>
+                </div>
+                <button type="button" class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                  data-proyecto-titulo="Final Project Full Package"
+                  data-proyecto-desc="Proyecto completo en Java que incluye la solución final de la asignatura. Incluye despliegue en Docker con contenedores para la aplicación y la base de datos."
+                  data-proyecto-url="https://github.com/agl0073/Final_Project_Full_Package"
+                  data-proyecto-img="./img/Final_Project_Full_Package.png"
+                  data-proyecto-alt="Captura del proyecto Final Project Full Package"
+                  data-proyecto-badges="Java,Docker">
+                  Ver detalle del proyecto
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required placeholder="ejemplo@gmail.com">
-        </div>
-        <div class="col-12">
-          <label for="asunto" class="form-label">Asunto</label>
-          <input type="text" class="form-control" id="asunto" required placeholder="...">
-        </div>
-        <div class="col-12">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" rows="4" required placeholder="..."></textarea>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="terminos" required>
-            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+      </div>
+    </section>
+
+    <!-- Modal de detalle de proyecto (Bootstrap JS Component) -->
+    <div class="modal fade" id="modalProyecto" tabindex="-1" aria-labelledby="modalProyectoLabel" aria-modal="true" role="dialog">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="modalProyectoLabel">Detalle del proyecto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modal-img" src="img/CV_Original.jpg" alt="Vista previa del proyecto" class="img-fluid rounded mb-3 w-100">
+            <p id="modal-desc" class="mb-3"></p>
+            <div id="modal-badges" class="mb-3"></div>
+          </div>
+          <div class="modal-footer">
+            <a id="modal-link" href="#" class="btn btn-primary" target="_blank" rel="noopener">Ver en GitHub</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </div>
-      </form>
-      <div class="mt-4 text-center">
-        <a href="aleganoza2006@ejemplo.com" class="me-3" aria-label="Correo"><i class="bi bi-envelope"></i></a>
-        <a href="https://www.linkedin.com/feed/" class="me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/agl0073" aria-label="GitHub"><i class="bi bi-github"></i></a>
       </div>
     </div>
-  </section>
+
+    <!-- Formación y experiencia (accordion – Bootstrap JS Component) -->
+    <section id="formacion" class="py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Formación y experiencia</h2>
+        <div class="accordion" id="formacionAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingDAW">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseDAW" aria-expanded="true" aria-controls="collapseDAW">
+                Desarrollo de Aplicaciones Web (DAW)
+              </button>
+            </h3>
+            <div id="collapseDAW" class="accordion-collapse collapse show" data-bs-parent="#formacionAccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>HTML, CSS, JavaScript, Bootstrap</li>
+                  <li>PHP, MySQL, Node.js</li>
+                  <li>Git &amp; GitHub, Figma, Docker Desktop</li>
+                  <li>MySQL, Microsoft SQL Server</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingPracticas">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePracticas" aria-expanded="false" aria-controls="collapsePracticas">
+                Prácticas en FFEOE
+              </button>
+            </h3>
+            <div id="collapsePracticas" class="accordion-collapse collapse" data-bs-parent="#formacionAccordion">
+              <div class="accordion-body">
+                Grado Medio en Sistemas Microinformáticos y Redes: Gestión en Ciberseguridad y Gestión de Riesgos.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto (formulario con validación Bootstrap) -->
+    <section id="contacto" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Contacto</h2>
+
+        <form class="needs-validation" id="formContacto" novalidate>
+
+          <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre <span aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="nombre" name="nombre"
+                    autocomplete="given-name" required minlength="2"
+                    placeholder="Nombre...">
+                  <div class="invalid-feedback">Por favor, introduce tu nombre (mínimo 2 caracteres).</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="apellidos" class="form-label">Apellidos <span aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="apellidos" name="apellidos"
+                    autocomplete="family-name" required minlength="2"
+                    placeholder="Apellidos...">
+                  <div class="invalid-feedback">Por favor, introduce tus apellidos.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email"
+                    autocomplete="email" required
+                    placeholder="ejemplo@correo.com">
+                  <div class="invalid-feedback">Por favor, introduce un correo electrónico válido.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="asunto" class="form-label">Asunto <span aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="asunto" name="asunto"
+                    autocomplete="off" required minlength="3"
+                    placeholder="...">
+                  <div class="invalid-feedback">Por favor, indica el asunto (mínimo 3 caracteres).</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje <span aria-hidden="true">*</span></label>
+                  <textarea class="form-control" id="mensaje" name="mensaje"
+                    rows="4" required minlength="10"
+                    placeholder="..."></textarea>
+                  <div class="invalid-feedback">Por favor, escribe tu mensaje (mínimo 10 caracteres).</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                    <label class="form-check-label" for="terminos">
+                      Acepto los términos y condiciones <span aria-hidden="true">*</span>
+                    </label>
+                    <div class="invalid-feedback">Debes aceptar los términos y condiciones.</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+
+          </div>
+        </form>
+
+        <!-- Alerta de éxito (oculta por defecto) -->
+        <div id="alerta-exito" class="alert alert-success mt-3 d-none" role="alert">
+          <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+          Mensaje enviado correctamente.
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="mt-5 text-center">
+          <p class="mb-2 fw-semibold">Encuéntrame en:</p>
+          <a href="mailto:aleganoza2006@gmail.com" class="me-3 social-link" aria-label="Enviar correo a Alejandro">
+            <i class="bi bi-envelope" aria-hidden="true"></i> Email
+          </a>
+          <a href="https://www.linkedin.com/feed/" class="me-3 social-link" target="_blank" rel="noopener" aria-label="Perfil de LinkedIn de Alejandro">
+            <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a href="https://github.com/agl0073" class="social-link" target="_blank" rel="noopener" aria-label="Perfil de GitHub de Alejandro">
+            <i class="bi bi-github" aria-hidden="true"></i> GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="bg-dark text-light py-3">
     <div class="container text-center">
-      <p class="mb-0">Alejandro Segundo Ganoza Leiro</p>
+      <p class="mb-0">&copy;Alejandro Segundo Ganoza Leiro</p>
     </div>
   </footer>
 
-  <!-- Bootstrap Bundle JS (required for navbar & accordion) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+  <!-- Bootstrap Bundle JS (incluye Popper – necesario para modal, accordion, tooltips) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- JavaScript propio -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
